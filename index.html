@@ -32,7 +32,25 @@
     .rule-list li {
       margin-bottom: 10px;
     }
+
+    .copy-button {
+      display: block;
+      margin: 0 auto;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
   </style>
+  <script>
+    function copyText() {
+      var textToCopy = "ddoser777";
+      navigator.clipboard.writeText(textToCopy);
+      alert("Текст скопирован: " + textToCopy);
+    }
+  </script>
 </head>
 <body>
   <h1>DarkNet</h1>
@@ -52,5 +70,6 @@
     </ol>
     <hr>
   </div>
+  <button class="copy-button" onclick="copyText()">Скопировать контакт для покупки</button>
 </body>
 </html>
